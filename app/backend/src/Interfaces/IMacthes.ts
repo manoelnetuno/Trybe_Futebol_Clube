@@ -6,3 +6,6 @@ export default interface Matches {
   awayTeamGoals: number,
   inProgress: boolean,
 }
+export interface MatchFilter {
+  inProgress?: string;
+}
