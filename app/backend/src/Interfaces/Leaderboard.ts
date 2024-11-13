@@ -1,3 +1,5 @@
+import { Imatchs } from './leaderboardmatches';
+
 export interface Leaderboard {
   name: string,
   totalPoints: number,
@@ -7,6 +9,9 @@ export interface Leaderboard {
   totalLosses: number,
   goalsFavor: number,
   goalsOwn: number,
-  goalsBalance: number,
-  efficiency: string,
+}
+
+export interface ILeaderboard {
+  getFinishedMatches(): Promise<Imatchs[]>,
+  getHomeTeamStats(): Promise<Leaderboard[]>,
 }
