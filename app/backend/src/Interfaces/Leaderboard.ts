@@ -9,6 +9,8 @@ export interface Leaderboard {
   totalLosses: number,
   goalsFavor: number,
   goalsOwn: number,
+  goalsBalance: number,
+  efficiency: string,
 }
 
 export interface ILeaderboard {
