@@ -5,6 +5,7 @@ import errorMiddleware from './middlewares/errorMiddleware';
 import teamRouter from './Routes/TeamRoutes';
 import loginRouter from './Routes/LoginRoutes';
 import matchRouter from './Routes/MatchRoutes';
+import Leaderboardrouter from './Routes/leaderboardRoutes';
 
 class App {
   public app: express.Express;
@@ -19,6 +20,7 @@ class App {
     this.app.use('/teams', teamRouter);
     this.app.use('/login', loginRouter);
     this.app.use('/matches', matchRouter);
+    this.app.use('/leaderboard', Leaderboardrouter);
 
     // Não remova esse middleware de erro, mas fique a vontade para customizá-lo
     // Mantenha ele sempre como o último middleware a ser chamado
